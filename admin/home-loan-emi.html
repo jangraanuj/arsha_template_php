@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Loan EMI Calculator</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+  <!-- Custom CSS for styling -->
+  <link rel="stylesheet" type="TEXT/CSS" href="custom-styles.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>HOME LOAN EMI</h1>
+    <div class="row">
+      <div class="col-xl-6">
+        <input type="range" name="loanAmount" class="form-control" placeholder="Loan Amount" min="0" max="10000000" step="50000" required> <br><br>
+        <p id="loan-amount-value">Loan Amount: $0</p>
+        <input type="range" name="interestRate" class="form-control" placeholder="Rate of Interest (%)" min="1" max="15" step="0.5" required> <br><br>
+        
+        <p id="interest-rate-value">Interest Rate: 1%</p>
+        <input type="range" name="loanDuration" class="form-control" placeholder="Duration (Months)" min="1" max="30" step="1" required> <br><br>
+        <p id="loan-period-value">Loan Period: 1 year</p>
+        <button class="btn btn-dark" id="btnCalculate">Calculate</button>
+      </div>
+      <div class="col-xl-6">
+        <h2>EMI: <span id="emi"></span></h2>
+        <h3>Loan Amount: <span id="loanAmountDisplay"></span></h3>
+        <h3>Interest: <span id="interestDisplay"></span></h3>
+        <h3>Final Amount: <span id="finalAmountDisplay"></span></h3>
+      </div>
+      <div class="col-xl-6">
+        <!-- <div class="loan-calculator-container">
+          <div class="header">
+            <h1 style="color: #37517e">Loan Calculator</h1>
+            <button>
+              <i class="bi bi-list"></i>
+            </button>
+          </div>
+          <div class="sub-container">
+            <div class="view">
+             
+              <div class="details">
+                <div>
+                  <div class="detail">
+                    <p style="color: #37517e">Amount</p>
+                    <p id="loan-amt-text" style="color: #37517e"></p>
+                  </div>
+                  <input type="range" id="loan-amount" min="0" max="10000000" step="50000">
+                </div>
+                <div>
+                  <div class="detail">
+                    <p style="color: #37517e">Length</p>
+                    <p id="loan-period-text" style="color: #37517e"></p>
+                  </div>
+                  <input type="range" id="loan-period" min="1" max="30" step="1">
+                </div>
+                <div>
+                  <div class="detail">
+                    <p style="color: #37517e">% Interest</p>
+                    <p id="interest-rate-text" style="color: #37517e"></p>
+                  </div>
+                  <input type="range" id="interest-rate" min="1" max="15" step="0.5">
+                </div>
+              </div>
+              
+              <div class="footer">
+                <p id="price-container"><span id="price">0</span>/mo</p>
+              </div>
+            </div> -->
+            <!-- Display pie chart -->
+            <div class="breakup">
+              <canvas id="pieChart"></canvas>
+            </div>
+          </div>
+          <!-- Additional loan details -->
+          <div class="col-xl-6">
+            <!-- <div class="loan-details">
+              <div class='chart-details'>
+                <p style="color: #37517e">Principal</p>
+                <p id="cp" style="color: #130F31; font-size: 17px;"></p>
+              </div>
+              <div class='chart-details'>
+                <p style="color: #37517e">Interest</p>
+                <p id="ci" style="color: #130F31; font-size: 17px;"></p>
+              </div>
+              <div class='chart-details'>
+                <p style="color: #37517e">Total Payable</p>
+                <p id="ct" style="color: #130F31; font-size: 17px;"></p>
+              </div>
+            </div> -->
+            <!-- Display line chart -->
+            <canvas id="lineChart" height="500px" width="500px"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Include necessary scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Include your custom JavaScript file -->
+  <script src="home-loan-emi.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js" integrity="sha512-L0Shl7nXXzIlBSUUPpxrokqq4ojqgZFQczTYlGjzONGTDAcLremjwaWv5A+EDLnxhQzY5xUZPWLOLqYRkY0Cbw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.0/chart.min.js"></script>
+  <!-- Bootstrap bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

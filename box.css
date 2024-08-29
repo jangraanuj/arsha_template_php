@@ -1,0 +1,205 @@
+
+        :root {
+            --total-brand: 14;
+            --logo-width: 12rem;
+            --total-logo-width: calc(var(--total-brand) * var(--logo-width) * 2);
+            --animation-duration: calc(var(--total-brand) * 2s);
+        }
+
+        .slider-component *,
+        .slider-component ::before,
+        .slider-component ::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .slider-component body {
+            min-height: 100vh;
+            background-color: whitesmoke;
+            display: grid;
+            place-items: center;
+        }
+
+        /* .slider-component section h1 {
+            font: 600 1.5rem sans-serif;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        } */
+
+        .slider-component .slider {
+            width: 100vw;
+            height: 8rem;
+            background-color: #fff;
+            /* box-shadow: 0.8rem 1.4rem -0.2rem #0001; */
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .slider-component .slider ul.brands {
+            list-style: none;
+            width: var(--total-logo-width);
+            display: flex;
+            justify-content: space-between;
+            animation: slideLeft 14s linear infinite;
+            padding: 0;
+            perspective: 100px;
+        }
+
+        .slider-component ul.brands li.brand-logo {
+            width: var(--logo-width);
+            font-size: 2rem;
+            text-align: center;
+            margin-left: 4rem;
+            transform-origin: center;
+            transition: transform 0.5s ease;
+        }
+
+        .slider-component ul.brands li.brand-logo:hover {
+            transform: scale(1.5);
+        }
+
+        .slider-component .slider::before,
+        .slider-component .slider::after {
+            position: absolute;
+            content: "";
+            height: 100%;
+            width: var(--logo-width);
+        }
+        
+
+        .slider-component .slider::before {
+            left: 0;
+            background: linear-gradient(to right, #fff 0%, #fff0 100%);
+        }
+        
+
+        .slider-component .slider::after {
+            right: 0;
+            background: linear-gradient(to left, #fff 0%, #fff0 100%);
+        }
+
+         /* @keyframes slideLeft {
+          
+            100% {
+                transform: translateX(calc(-100%/4));
+            }
+        } */
+        @keyframes slideLeft {
+            100% {
+                transform: translateX(calc(-100%/4));
+            }
+        }
+
+        .slider-component .slider:hover ul.brands {
+            animation-play-state: paused;
+        }
+   
+/* :root {
+    --total-brand: 14;
+    --logo-width: 12rem;
+    --total-logo-width: calc(var(--total-brand) * var(--logo-width)*2);
+    --animation-duration: calc(var(--total-brand * 2s));
+}
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: whitesmoke;
+    display: grid;
+    place-items: center;
+}
+
+section h1 {
+    font: 600 1.5rem sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.slider {
+    width: 100vw;
+    height: 10rem;
+    background-color: #fff;
+    box-shadow: 0.8rem 1.4rem -0.2rem #0001;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.slider ul.brands {
+    list-style: none;
+    width: var(--total-logo-width);
+    display: flex;
+
+    justify-content: space-between;
+    animation: slideLeft 14s linear infinite;
+    padding: 0;
+    perspective: 100px;
+}
+
+ul.brands li.brand-logo {
+    width: var(--logo-width);
+    font-size: 2rem;
+    text-align: center; */
+    /* margin-left: 3rem; */
+    /* transform-origin: center;
+    transition: transform 0.5s ease;
+
+}
+ul.brands li.brand-logo:hover {
+    transform: scale(1.5);
+
+    
+
+}
+
+.slider::before,
+.slider::after {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: var(--logo-width);
+}
+
+.slider::before {
+    left: 0;
+    background: linear-gradient(to right, #fff 0%, #fff0 100%);
+}
+
+.slider::after {
+    right: 0;
+    background: linear-gradient(to left, #fff 0%, #fff0 100%);
+}
+
+@keyframes slideLeft {
+    100% {
+        transform: translateX(calc(-100%/4));
+    }
+}
+.slider:hover ul.brands {
+
+    animation-play-state: paused;
+} */
+
+
+
+
+
+
+
+
+
+
